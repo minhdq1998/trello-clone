@@ -1,13 +1,55 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root {
+    --gray-bg: #dee0e2;
+    --white-bg: #ffffff;
+    --light-gray-text: #9d9d9d;
+    --dark-gray-text:#172b4d;
+    --normal-text: #474747;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+    font-family: Helvetica;
+}
+
+.trello-clone-container {
+    border-top: 1px solid var(--gray-bg);
+    padding-top: 30px;
+}
+
+.column {
+    width: 272px;
+    background-color: var(--gray-bg);
+    color: var(--dark-gray-text);
+    border-radius: 3px;
+    padding: 4px;
+}
+
+.header {
+    font-size: 14px;
+    font-weight: 600;
+    padding: 10px;
+}
+
+.card-list {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    color: var(--normal-text);
+    border-radius: 3px;
+}
+
+.card {
+    background-color: var(--white-bg);
+    padding: 6px 8px 2px 8px;
+    margin: 4px;
+    height: 24px;
+    border-radius: 3px;
+}
+
+.footer {
+    margin: 4px;
+    padding: 10px;
+    font-size: 14px;
+    font-weight: lighter;
+    color: var(--light-gray-text);
+    cursor: pointer;
 }

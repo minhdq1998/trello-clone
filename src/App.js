@@ -1,25 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import Column from './components/template/Column'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+const TrelloClone = () => (
+    <div>
+        <h3>Trello Clone</h3>
+        <div className="container trello-clone-container">
+            <Column />
+        </div>
     </div>
-  );
-}
+)
 
-export default App;
+const App = () => (
+    <div>
+        <TrelloClone />
+    </div>
+)
+
+export default App
