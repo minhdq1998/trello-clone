@@ -1,9 +1,14 @@
 :root {
     --gray-bg: #dee0e2;
     --white-bg: #ffffff;
+    --gray-bg-hover: #d7d9de;
+    --light-gray-bg-hover: #f2f3f6;
     --light-gray-text: #9d9d9d;
     --dark-gray-text:#172b4d;
     --normal-text: #474747;
+    --blue-hl: #0079bf;
+    --green-bg: #4eb54f;
+    --dark-green-bg: #4aa245;
 }
 
 body {
@@ -22,11 +27,47 @@ body {
     border-radius: 3px;
     padding: 4px;
 }
-
+/*  Header */
 .header {
     font-size: 14px;
     font-weight: 600;
-    padding: 10px;
+    padding: 4px 4px 4px 4px;
+}
+
+.header input {
+    width: 94%;
+    height: 22px !important;
+    border-radius: 3px;
+    font-weight: 600;
+    box-shadow: none;
+    border: 2px solid var(--blue-hl);
+    font-size: 14px;
+}
+
+.disable-title {
+    font-weight: 600;
+    height: 22px;
+    padding-left: 4px;
+    padding-top: 6px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+/* ------- */
+::-webkit-scrollbar {
+    width: 8px;
+}
+  
+/* Track */
+::-webkit-scrollbar-track {
+    border-radius: 8px;
+    background: var(--light-gray-bg-hover); 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--light-gray-text); 
+    border-radius: 8px;
 }
 
 .card-list {
@@ -35,21 +76,77 @@ body {
     font-weight: 400;
     color: var(--normal-text);
     border-radius: 3px;
+    max-height: 200px;
+    overflow: auto;
 }
 
 .card {
     background-color: var(--white-bg);
     padding: 6px 8px 2px 8px;
-    margin: 4px;
-    height: 24px;
+    margin: 6px;
+    min-height: 24px;
+    max-height: 200px;
     border-radius: 3px;
 }
 
+.card:hover {
+    background-color: var(--light-gray-bg-hover);
+    cursor: pointer;
+}
+
 .footer {
-    margin: 4px;
-    padding: 10px;
     font-size: 14px;
     font-weight: lighter;
     color: var(--light-gray-text);
     cursor: pointer;
+}
+
+.footer textarea {
+    resize: none;
+    margin: 6px;
+    width: 244px;
+    height: 50px;
+    max-height: 80vh;
+    border-radius: 3px;
+    padding: 6px 8px 2px 8px;
+    font-family: Helvetica;
+    font-size: 14px;
+    line-height: 20px;
+    border: 0px !important;
+    outline:none !important;
+    overflow-wrap: break-word;
+}
+
+.footer textarea:focus {
+    font-family: Helvetica;
+    font-size: 14px;
+    line-height: 20px;
+    border: 0px !important;
+    outline:none !important;
+    overflow-wrap: break-word;
+}
+
+.footer button {
+    margin: 6px;
+    color: var(--white-bg);
+    background-color: var(--dark-green-bg);
+    border: none;
+    border-radius: 3px;
+    padding: 6px 12px;
+    cursor: pointer;
+    outline: none;
+}
+
+.footer button:hover {
+    background-color: var(--green-bg);
+}
+
+.add-card-prompt {
+    border-radius: 3px;
+    padding: 10px 8px 10px 8px;
+    margin: 4px;
+}
+
+.add-card-prompt:hover {
+    background-color: var(--gray-bg-hover);
 }
